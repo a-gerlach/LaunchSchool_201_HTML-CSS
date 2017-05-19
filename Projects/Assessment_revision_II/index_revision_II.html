@@ -1,0 +1,221 @@
+<!-- Revision II 16.06.17
+  - Added a new CSS Rule to make sure that the color of the btn
+    "Mark As Complete" does not change on :hover. New rule is on
+    line 195 
+  - Added a new rule on line 314 to remove the rounded corners
+    for different operating systems.
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo List</title>  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/styles_revision.css">
+</head>
+<body>  
+  <input type="checkbox" id="menu-toggle">
+  <nav id="menu">
+    <section>
+      <header>
+        <img src="images/listicon.jpg" alt="listicon">
+        <h2>All Todos</h2>
+        <span>18</span>
+      </header>    
+      <ul>
+        <li class="selected">02/16<span class="active">8</span></li>
+        <li>03/16<span>2</span></li>
+        <li>04/16<span>1</span></li>
+        <li>05/16<span>1</span></li>
+        <li>06/16<span>6</span></li>
+      </ul>
+    </section>
+    <section>
+      <header>
+        <img src="images/check.jpg" alt="checkmark">
+        <h2>Completed</h2>
+      </header>
+      <ul>
+        <li class="done">02/15</li>
+        <li class="done">03/15</li>
+        <li class="done">04/15</li>
+        <li class="done">05/15</li>
+        <li class="done">06/14</li>
+      </ul>
+    </section>
+  </nav>
+  <main>
+    <label for="menu-toggle"><img class="navburger" src="images/navburger.jpg" alt="navburger"></label>
+    <h1>02/16 <span class="active">8</span></h1>
+    <div class="list">         
+      <section>
+        <h2 class="important"><img src="images/plus.jpg" alt="plus icon">Add a new todo</h2>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item1" class="css-checkbox" id="item1" value="item1">
+            <label for="modal" class="css-label">Item 1</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item2" class="css-checkbox" id="item2" value="item2">
+            <label for="item2" class="css-label"
+            >Item 2</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item3" class="css-checkbox" id="item3" value="item3" checked="">
+            <label for="item3" class="css-label"
+            >Item 3</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item4" class="css-checkbox" id="item4" value="item4" checked="">
+            <label for="item4" class="css-label"
+            >Item 4</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item5" class="css-checkbox" id="item5" value="item5" checked="">
+            <label for="item5" class="css-label"
+            >Item 5</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item6" class="css-checkbox" id="item6" value="item6">
+            <label for="item6" class="css-label"
+            >Item 6</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item7" class="css-checkbox" id="item7" value="item7">
+            <label for="item7" class="css-label"
+            >Item 7</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item8" class="css-checkbox" id="item8" value="item2">
+            <label for="item8" class="css-label"
+            >Item 8</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <input type="checkbox" name="item9" class="css-checkbox" id="item9" value="item9">
+            <label for="item9" class="css-label"
+            >Item 9</label>
+          </dt><!--
+          --><dd>
+            <img src="images/bin.jpg" alt="trashcan">
+          </dd>
+        </dl>
+      </section>
+      <input class="modal" type="checkbox" id="modal" name="modal"> 
+      <div class="modal">
+        <form action="#" method="post">
+          <dl>
+            <dt>
+              <label for="title">Title</label>
+            </dt>
+            <dd>
+              <input type="text" name="title" id="title" placeholder="Item 2">
+            </dd>           
+          </dl>
+          <dl>
+            <dt>
+              <label for="day">Due Date</label>
+            </dt>
+            <dd>
+              <select name="day" id="day">
+                <option value="16" selected>16</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <span>/</span>
+            </dd>
+            <dd>
+              <select name="mon" id="month">
+                <option class="test" selected="">Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <span>/</span>
+            </dd>
+            <dd>
+              <select name="year" id="year">
+                <option selected>Year</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+              </select>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label for="desc">Description</label>
+            </dt>
+            <dd>
+              <textarea id="desc" placeholder="Description"></textarea>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <input class="btn" type="submit" value="Save" name="save">
+            </dt>
+            <dd>
+              <label for="modal" class="btn">Mark As Complete</label>
+            </dd>
+          </dl>              
+        </form>
+      </div>      
+    </div>
+  </main>
+</body>
+</html>

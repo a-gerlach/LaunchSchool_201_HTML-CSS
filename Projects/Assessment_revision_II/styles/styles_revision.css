@@ -1,0 +1,336 @@
+@import url("whitespace-reset.css");
+
+body {
+  font: normal 16px Helvetica, Arial, sans-serif;
+  /*max-width: 1200px;*/
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+nav {
+  float: left;
+  display: block;
+  width: 333px;
+  background-color: #464f77;
+  color: #fff;
+  padding: 70px 0 0 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+nav header {
+  padding: 0 0 0 100px;
+  padding-bottom: 10px;
+}
+
+nav header h2 {
+  display: inline-block;
+  vertical-align: 5px;
+  padding-left: 5px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+span {
+  background-color: #6b7292;
+  padding: 2px 5px;
+  border-radius: 100%;
+  font-size: 14px;
+}
+
+nav header span {
+  vertical-align: 5px;
+  margin-left: 54px;
+}
+
+nav ul li {
+  font-size: 14px;
+  color: #a3a7bb;
+  padding: 13px 0 13px 135px;
+}
+
+ul span {
+  margin-left: 100px;
+}
+
+li.selected {
+  background-color: #383f5f;
+  color: #fff;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+span.active {
+  background-color: #148fd5;
+  color: #fff;
+}
+
+section + section {
+  padding-top: 60px;
+}
+
+main {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 70px 100px 0 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.navburger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  visibility: hidden;
+}
+
+#menu-toggle {
+  display: none; /* hide the checkbox */
+}
+
+#menu-toggle:checked + #menu {
+  display: block;
+}
+
+main h1 {
+  font-size: 21px;
+}
+
+main h1 span {
+  margin-left: 20px;
+  vertical-align: 2px;
+}
+
+div.list {
+  margin-top: 40px;
+}
+
+section dl dt,
+section dl dd {
+  display: inline-block;
+}
+
+section dl {
+  border-top: 1px solid #e7e7e7;
+}
+
+section dl dt {
+  width: 90%;
+  padding: 16px 0;  
+  text-align: left;
+}
+
+section dd {
+  width: 10%;
+  text-align: right;
+}
+
+h2.important {
+  color: #148fd5;
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+
+.important img {
+  padding-right: 13px; 
+}
+
+label:hover {
+  color: #148fd5;
+}
+
+.modal {
+  display: none;
+}
+
+input:checked.modal + div.modal
+ {
+  display: block;
+}
+
+div.modal:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  z-index: 1;
+  content: "";
+  background: rgba(0, 0, 0, .4);        
+}
+
+div.modal form {
+  position: absolute; 
+  z-index: 2;
+  top: 105px;
+  font-size: 16px;
+  left: 100px;
+  padding: 40px 40px 40px 35px;
+  background-color: #fff;
+}
+
+select[id="month"],
+select[id="year"] {
+  color: #a1a1a1;
+}
+
+input, textarea, select, button {
+  font: normal 16px Helvetica, Arial, sans-serif;
+  border: 1px solid #b3b3b3;
+  border-radius: 0;
+}
+
+div.modal label:hover {
+  color: black;  
+}
+
+div.modal label.btn:hover {
+  color: #fff;
+}
+
+div.modal form dd,
+div.modal form dt {
+  display: inline-block;
+  width: auto;
+  padding: 0;
+  text-align: inherit;
+}
+
+div.modal form dl {
+  padding-bottom: 25px;
+}
+
+label[for="title"] {
+  padding-right: 70px;
+}
+
+label[for="day"] {
+  padding-right: 32px;
+}
+
+label[for="desc"] {
+  vertical-align: 137px;
+  padding-right: 20px;
+}
+
+input[type="text"] {
+  display: inline-block;
+  width: 400px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+form select {
+  width: 120px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+form span {
+  background-color: #fff;
+  padding: 0 5px;  
+}
+
+textarea {
+  width: 397px;
+  height: 145px;
+  resize: none;
+  padding: 10px 0 0 10px;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #148fd5;
+  color: #fff;
+  padding: 10px 0;
+  width: 185px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+form dl:last-of-type {
+  padding-bottom: 0;
+}
+
+form dl:last-of-type dt input {
+  margin-left: 104px;
+  margin-right: 13px;
+}
+
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  border-radius: 50px;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 30px;
+  height: 16px; 
+  display: inline-block;
+  line-height: 16px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -16px;
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+
+label.css-label {
+  background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_81f722579f9a47fe19127e2f016b3c37.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.select { 
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;   
+  -webkit-border-radius: 0; 
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-right: 50px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navburger {    
+    visibility: visible;
+    cursor: pointer;
+  }  
+}
